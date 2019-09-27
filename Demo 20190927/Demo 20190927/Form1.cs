@@ -35,12 +35,20 @@ namespace Demo_20190927
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string op = button1.Text;
+            string op = button2.Text;
             int x = int.Parse(textBox1.Text);
             int y = int.Parse(textBox2.Text);
             int result = myCalculator.Sub(x, y);
-            
-            listBox1.Items.Add(string.Format("{0} - {1} = {2}", x, y, result));
+            ShowResult(op, x, y, result);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string op = button3.Text;
+            int x = int.Parse(textBox1.Text);
+            int y = int.Parse(textBox2.Text);
+            int result = myCalculator.Mult(x, y);
+            ShowResult(op, x, y, result);
         }
     }
 }
