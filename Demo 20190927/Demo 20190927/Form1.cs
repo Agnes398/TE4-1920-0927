@@ -12,6 +12,7 @@ namespace Demo_20190927
 {
     public partial class Form1 : Form
     {
+        Calculator myCalculator = new Calculator();
         public Form1()
         {
             InitializeComponent();
@@ -19,7 +20,8 @@ namespace Demo_20190927
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int number1 = Parse(textBox1.Text);
+            int result = myCalculator.Add(int.Parse(textBox1.Text), int.Parse(textBox2.Text));
+            listBox1.Items.Add(result);
         }
     }
 }
