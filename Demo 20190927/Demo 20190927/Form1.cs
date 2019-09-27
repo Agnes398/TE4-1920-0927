@@ -50,5 +50,14 @@ namespace Demo_20190927
             int result = myCalculator.Mult(x, y);
             ShowResult(op, x, y, result);
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            string op = button4.Text;
+            int x = int.Parse(textBox1.Text);
+            int y = int.Parse(textBox2.Text);
+            int result = myCalculator.Div(x, y);
+            ShowResult(op, x, y, result);
+        }
     }
 }
