@@ -12,5 +12,10 @@ namespace Demo_20190927
         {
             return number1 + number2;
         }
+
+        public int Sub (int number1, int number2)
+        {
+            return number1 - number2;
+        }
     }
 }
