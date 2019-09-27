@@ -10,17 +10,34 @@ namespace Calculator.CLI
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter number 1:");
-            int x = int.Parse(Console.ReadLine());
+            System.Collections.ArrayList myNumbers = new System.Collections.ArrayList();
 
-            Console.WriteLine("Enter number 1:");
-            int y = int.Parse(Console.ReadLine());
+            string userInput = "";
+            Console.WriteLine("Enter any amount of numbers, press 'x' to finish: ");
+            do
+            {
+                userInput = Console.ReadLine();
+                myNumbers.Add(userInput);
 
-            Console.WriteLine("Enter operation '+' or '-'");
+            } while (userInput != "x");
+
+            Console.WriteLine("Tack! Du matade in {0} nummer.", myNumbers.Count);
+
+            Console.WriteLine("Enter operation '+' or '-' or '*' or '/': ");
             string op = Console.ReadLine();
 
-            Calculator.Component.Calculator myCalculator = new Component.Calculator();
-            Console.WriteLine("{0} {1} {2} = {3}", x, op , y, myCalculator.Add(x, y));
+            Calculator.Component.Calculator myCalculator = new Component.Calculator(); //skapar ny objekt i class?
+            if (op == "+")
+            {
+                foreach (int i in myNumbers)
+                {
+                    Console.Write("{0} {1} ", i, op);
+
+                    Console.Write(" = {3}", myCalculator.Add2(int i));
+                }
+                
+            }
+
         }
     }
 }

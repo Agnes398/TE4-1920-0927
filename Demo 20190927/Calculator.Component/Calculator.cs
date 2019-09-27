@@ -8,6 +8,7 @@ namespace Calculator.Component
 {
     public class Calculator
     {
+
         public int Add(int number1, int number2)
         {
             return number1 + number2;
@@ -27,5 +28,6 @@ namespace Calculator.Component
         {
             return number1 / number2;
         }
+
     }
 }
