@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Demo_20190927
+namespace Calculator.Component
 {
-    class Calculator
+    public class Calculator
     {
         public int Add(int number1, int number2)
         {

@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Calculator.Component;
 
 namespace Demo_20190927
 {
     public partial class Form1 : Form
     {
-        Calculator myCalculator = new Calculator();
+        Calculator.Component.Calculator myCalculator = new Calculator.Component.Calculator();
         public Form1()
         {
             InitializeComponent();
